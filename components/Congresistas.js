@@ -8,7 +8,7 @@ function formatName(fullName) {
   return `${firstName?.trim()} ${lastName?.trim()}`.normalize("NFD");
 }
 
-export default function Congresistas() {
+export default function Congresistas({ openModal }) {
   // const [congresistas, setCongresistas] = useState([]);
 
   // useEffect(() => {
@@ -21,10 +21,19 @@ export default function Congresistas() {
   // }, []);
 
   return (
-    <div className={styles.container}>
-      {imagenesPlaceholder.map((image) => (
-        <Image src={image} width={200} height={270} className={styles.image} />
-      ))}
-    </div>
+    <>
+      <div className={styles.container}>
+        {imagenesPlaceholder.map((image) => (
+          <Image
+            src={image}
+            key={image}
+            width={200}
+            height={270}
+            className={styles.image}
+            onClick={openModal}
+          />
+        ))}
+      </div>
+    </>
   );
 }

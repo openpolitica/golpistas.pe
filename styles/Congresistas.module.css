@@ -7,13 +7,6 @@
   /* grid-auto-rows: 100px; */
 }
 
-.imagePlaceholder {
-  width: 269px;
-  height: 270px;
-  background-color: #b3b3b3;
-  border: 1px solid black;
-}
-
 .imageContainer {
   position: relative;
   background-color: green;
@@ -23,4 +16,5 @@
 .image {
   filter: grayscale(100%);
   width: 100%;
+  cursor: pointer;
 }
