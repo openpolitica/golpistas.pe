@@ -2,10 +2,7 @@ import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 
-export default function ModalCongresista({
-  currentCongresista,
-  setIsOpen,
-}) {
+export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   const handleClose = () => {
     setIsOpen(false);
   };
