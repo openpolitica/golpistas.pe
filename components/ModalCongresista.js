@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
+import XIcon from "../icons/XIcon";
 
 export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   const handleClose = () => {
@@ -10,8 +11,8 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   return (
     <div className={styles.modalWindow}>
       <div className={styles.modal}>
-        <div className={styles.image}>
-          <Image src={currentCongresista.imageUrl} width={480} height={650} />
+        <div className={styles.imageContainer}>
+          <Image src={currentCongresista.imageUrl} width={480} height={650} className={styles.image}/>
         </div>
         <div className={styles.info}>
           <p className={styles.name}>
@@ -37,7 +38,7 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
           </p>
         </div>
         <div onClick={handleClose} className={styles.x}>
-          X
+          <XIcon />
         </div>
       </div>
     </div>

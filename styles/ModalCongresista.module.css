@@ -80,12 +80,16 @@
   font-weight: 500;
 }
 
+.image {
+  filter: grayscale(100%);
+}
+
 @media (max-width: 600px) {
   .modal {
     flex-direction: column;
   }
 
-  .image {
+  .imageContainer {
     width: 200px;
     margin: 0 auto;
   }
