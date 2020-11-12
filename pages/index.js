@@ -32,8 +32,9 @@ export default function Home() {
     },
   });
 
-  const openModal = () => {
+  const openModal = (congresista) => {
     setIsOpen(true);
+    setCurrentCongresista(congresista);
   };
 
   return (

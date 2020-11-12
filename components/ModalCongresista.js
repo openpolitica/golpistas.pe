@@ -11,20 +11,18 @@ export default function ModalCongresista({
     setIsOpen(false);
   };
 
+  console.log(currentCongresista);
+
   return (
     <div className={styles.modalWindow}>
       <div className={styles.modal}>
         <div className={styles.image}>
-          <Image
-            src={currentCongresista.imageUrl}
-            key={currentCongresista.id}
-            width={580}
-            height={650}
-          />
+          <Image src={currentCongresista.imageUrl} width={580} height={650} />
         </div>
         <div className={styles.info}>
           <p className={styles.name}>
-            {currentCongresista.nombres.toLowerCase()} {currentCongresista.apellidos.toLowerCase()}
+            {currentCongresista.nombres.toLowerCase()}{" "}
+            {currentCongresista.apellidos.toLowerCase()}
           </p>
           <p className={styles.partido}>
             {currentCongresista.partidoPolitico.nombre.toLowerCase()}
