@@ -55,7 +55,6 @@ export default function Home() {
       {isOpen && (
         <ModalCongresista
           currentCongresista={currentCongresista}
-          isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
       )}

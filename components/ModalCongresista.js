@@ -4,20 +4,17 @@ import JudgeIcon from "../icons/JudgeIcon";
 
 export default function ModalCongresista({
   currentCongresista,
-  isOpen,
   setIsOpen,
 }) {
   const handleClose = () => {
     setIsOpen(false);
   };
 
-  console.log(currentCongresista);
-
   return (
     <div className={styles.modalWindow}>
       <div className={styles.modal}>
         <div className={styles.image}>
-          <Image src={currentCongresista.imageUrl} width={580} height={650} />
+          <Image src={currentCongresista.imageUrl} width={480} height={650} />
         </div>
         <div className={styles.info}>
           <p className={styles.name}>

@@ -2,9 +2,8 @@
   justify-content: center;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 270px);
+  grid-template-columns: repeat(auto-fit, 230px);
   gap: 0px;
-  /* grid-auto-rows: 100px; */
 }
 
 .imageContainer {
