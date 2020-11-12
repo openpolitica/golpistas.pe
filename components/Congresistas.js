@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import styles from "../styles/Congresistas.module.css";
-// import Image from "next/image";
+import Image from "next/image";
+import { imagenesPlaceholder } from "../utils/imagenesPlaceholder";
 
 function formatName(fullName) {
   const [lastName, firstName] = fullName.split(",");
@@ -8,23 +9,21 @@ function formatName(fullName) {
 }
 
 export default function Congresistas() {
-  const [congresistas, setCongresistas] = useState([]);
+  // const [congresistas, setCongresistas] = useState([]);
 
-  useEffect(() => {
-    async function getCongresistas() {
-      const response = await fetch("/api/congresistas");
-      const data = await response.json();
-      setCongresistas(data.congresistas);
-    }
-    getCongresistas();
-  }, []);
+  // useEffect(() => {
+  //   async function getCongresistas() {
+  //     const response = await fetch("/api/congresistas");
+  //     const data = await response.json();
+  //     setCongresistas(data.congresistas);
+  //   }
+  //   getCongresistas();
+  // }, []);
 
   return (
     <div className={styles.container}>
-      {congresistas.map((congresista) => (
-        <>
-          <div className={styles.imagePlaceholder} />
-        </>
+      {imagenesPlaceholder.map((image) => (
+        <Image src={image} width={200} height={270} className={styles.image} />
       ))}
     </div>
   );
