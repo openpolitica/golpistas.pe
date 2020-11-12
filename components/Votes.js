@@ -2,7 +2,7 @@ import styles from "../styles/Votes.module.css";
 
 export default function Votes() {
   return (
-    <div className={styles.votes}>
+    <div className={styles.votes} id="congresistas">
       <h1 className={styles.title}>¿A quiénes no debemos olvidar?</h1>
       <p className={styles.subtitle}>
         Denuncias sobre corrupción, lavado de activos e incluso homicidio.

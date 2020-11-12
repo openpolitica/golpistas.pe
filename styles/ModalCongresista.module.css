@@ -20,6 +20,7 @@
   background: #ffffff;
   display: flex;
   z-index: 1;
+  box-shadow: 0px 0px 20px 4px #9494948f;
 }
 
 .info {
@@ -32,10 +33,17 @@
   font-weight: 700;
   margin: 0;
   text-transform: capitalize;
+  font-family: TiemposHeadline;
+  font-weight: 900;
+  font-size: 26px;
 }
 
 .partido {
-  margin-top: 13px;
+  margin: 0;
+  margin-top: 10px;
+  font-family: TiemposHeadline;
+  font-weight: 900;
+  font-size: 24px;
   color: #989898;
   text-transform: capitalize;
 }
@@ -45,16 +53,12 @@
   border: 1px solid black;
 }
 
-.cargo {
-  font-weight: 200;
-}
-
 .cargo span {
   text-transform: capitalize;
 }
 
 .cargo .label {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .denuncias {

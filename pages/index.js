@@ -11,26 +11,7 @@ import ModalCongresista from "../components/ModalCongresista";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentCongresista, setCurrentCongresista] = useState({
-    nombres: "EDUARDO GEOVANNI",
-    apellidos: "ACATE CORONEL",
-    mail: "eacate@congreso.gob.pe",
-    cargoPublico: {
-      tipo: "Congresista",
-      activo: true,
-    },
-    votos: {
-      votoVacancia: 1,
-      admisionVacancia: 0,
-    },
-    investigaciones: 3,
-    imageUrl:
-      "https://res.cloudinary.com/dmki8aqt6/image/upload/v1605166589/golpista.pe/EDUARDO_GEOVANNI_ACATE_CORONEL_x8gigx.jpg",
-    partidoPolitico: {
-      nombre: "ALIANZA PARA EL PROGRESO",
-      departamento: "LORETO",
-    },
-  });
+  const [currentCongresista, setCurrentCongresista] = useState(null);
 
   const openModal = (congresista) => {
     setIsOpen(true);

@@ -3,7 +3,9 @@
 }
 
 .title {
-  font-size: 34px;
+  font-family: TiemposHeadline;
+  color: #373f41;
+  font-size: 48px;
   margin-bottom: 50px;
   margin-left: 22px;
   margin-right: 22px;
@@ -19,6 +21,10 @@
   line-height: 22px;
   letter-spacing: 0.3px;
   color: #737b7d;
+}
+
+.description span {
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {

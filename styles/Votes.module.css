@@ -5,7 +5,9 @@
 }
 
 .title {
-  font-size: 34px;
+  font-family: TiemposHeadline;
+  color: #373f41;
+  font-size: 48px;
   margin-bottom: 10px;
   text-align: center;
 }

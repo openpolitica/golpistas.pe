@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className={styles.logo}>
         <img src="/golpista-ico.png" />
         <Link href="/">
-          <a className={styles.logoTitle}>GOLPISTA.PE</a>
+          <a className={styles.logoTitle}>GOLPISTAS.PE</a>
         </Link>
       </div>
 
@@ -15,10 +15,10 @@ export default function Navbar() {
         <Link href="/">
           <a className={styles.link}>Inicio</a>
         </Link>
-        <Link href="#">
+        <Link href="#historia">
           <a className={styles.link}>Historia</a>
         </Link>
-        <Link href="#">
+        <Link href="#congresistas">
           <a className={styles.link}>Congresistas</a>
         </Link>
       </div>
