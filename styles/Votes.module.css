@@ -1,0 +1,114 @@
+.votes {
+  padding: 3rem 6rem;
+  width: 100%;
+  background-color: #F8F8F8;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.red,
+.yellow,
+.blue {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.number {
+  text-align: center;
+}
+
+.red .number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10%;
+}
+
+.quantity {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.text {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+  min-width: 73px;
+}
+
+.red {
+  color: #ef4242;
+  width: 80%;
+}
+
+.blue {
+  color: #1d1ab7;
+  width: 15%;
+}
+
+.yellow {
+  color: #ffd600;
+  width: 5%;
+}
+
+.redBlock,
+.yellowBlock,
+.blueBlock {
+  height: 22px;
+}
+
+.redBlock {
+  background-color: #ef4242;
+}
+
+.blueBlock {
+  background-color: #1d1ab7;
+}
+
+.yellowBlock {
+  background-color: #ffd600;
+}
+
+@media (max-width: 600px) {
+  .votes {
+    padding: 1rem 2rem;
+  }
+
+  .quantity {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .text {
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 8px;
+    min-width: 73px;
+  }
+
+  .blue .text {
+    margin-left: -10px;
+  }
+}

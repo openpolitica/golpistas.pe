@@ -1,0 +1,29 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  margin-left: 32px;
+  font-size: 14px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoTitle {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .links {
+    display: none;
+  }
+}

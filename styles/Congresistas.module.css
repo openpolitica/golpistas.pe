@@ -1,0 +1,15 @@
+.container {
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  gap: 0px;
+  /* grid-auto-rows: 100px; */
+}
+
+.imagePlaceholder {
+  width: 269px;
+  height: 270px;
+  background-color: #b3b3b3;
+  border: 1px solid black;
+}

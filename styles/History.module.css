@@ -1,0 +1,31 @@
+.history {
+  padding: 3rem 6rem;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.description {
+  font-size: 16px;
+  display: flex;
+}
+
+.description p {
+  margin: 22px;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  color: #737b7d;
+}
+
+@media (max-width: 600px) {
+  .history {
+    padding: 1rem 2rem;
+  }
+  .description {
+    flex-direction: column;
+  }
+}
