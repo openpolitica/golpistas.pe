@@ -8,6 +8,7 @@ import Timeline from "../icons/Timeline";
 import Header from "../components/Header";
 import Congresistas from "../components/Congresistas";
 import ModalCongresista from "../components/ModalCongresista";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function Home() {
       <Banner />
       <Votes />
       <Congresistas openModal={openModal} />
+      <Footer />
       {isOpen && (
         <ModalCongresista
           currentCongresista={currentCongresista}
