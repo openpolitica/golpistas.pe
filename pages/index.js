@@ -36,7 +36,6 @@ export default function Home () {
         let party = congresista.partidoPolitico
         party['slug'] = slug
         party['img'] = '/partidos/' + slug + '.png'
-        if (slug === 'partido-morado') {console.log(congresista)}
         if (!parsedParties.some(entry => entry.slug === slug)) {
           parsedParties.push(party)
         }
