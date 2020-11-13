@@ -16,8 +16,9 @@ function makeSlug (str) {
   return str;
 }
 
-function onlyUnique(value, index, self) {
-  return self.indexOf(value) === index;
+function pluralize(num, plural, singular) {
+  if (num == 1) return singular;
+  return plural;
 }
 
-export {makeSlug, onlyUnique}
+export {makeSlug, pluralize}

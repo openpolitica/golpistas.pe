@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 import XIcon from "../icons/XIcon";
-import { makeSlug } from '../utils/functions'
+import { makeSlug, pluralize } from '../utils/functions'
 
 export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   const handleClose = () => {
@@ -44,7 +44,12 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
             <div className={styles.iconContainer}>
               <JudgeIcon />
             </div>
-            {currentCongresista.investigaciones} denuncias
+            {currentCongresista.investigaciones}{" "}
+            {pluralize(
+              currentCongresista.investigaciones,
+              "denuncias",
+              "denuncia"
+            )}
           </p>
         </div>
         <div onClick={handleClose} className={styles.x}>

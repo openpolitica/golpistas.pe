@@ -1,5 +1,4 @@
 import styles from '../styles/Parties.module.css'
-import React from 'react'
 
 export default function Parties ({ parties, filterParty }) {
   return (

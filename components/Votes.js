@@ -7,6 +7,8 @@ export default function Votes() {
       <p className={styles.subtitle}>
         Denuncias sobre corrupción, lavado de activos e incluso homicidio.
       </p>
+      <div><a target="_blank" rel="noopener" href="https://elfoco.pe/informes/todos-los-congresistas-con-expedientes-en-el-ministerio-publico">*Fuente: La lista completa de los congresistas con Expedientes en el Ministerio Público</a></div>
+      
       <div className={styles.line}>
         <div className={styles.red}>
           <div className={styles.number}>
@@ -26,6 +28,7 @@ export default function Votes() {
           <div className={styles.yellowBlock} />
         </div>
       </div>
+      <p className={styles.cta}>Haz click para ver la cantidad de denuncias</p>
     </div>
   );
 }
