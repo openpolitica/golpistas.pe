@@ -12,6 +12,7 @@
 
 .votes > div > a {
   text-decoration: underline;
+  text-align: center;
 }
 
 .title {
