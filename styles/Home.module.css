@@ -8,4 +8,16 @@
 .timelineContainer {
   width: 100%;
   margin-bottom: 91px;
+  padding: 40px 0;
+}
+
+@media (max-width: 900px) {
+  .timelineContainer {
+    overflow-x: auto;
+  }
+
+  .timelineContainer svg {
+    width: 1438px;
+    height: 141px;
+  }
 }

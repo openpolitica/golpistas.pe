@@ -120,12 +120,11 @@ export default function Home() {
       <Parties parties={parties} filterParty={filterParty} />
       <Congresistas congresistas={filteredCongresistas} openModal={openModal} />
       <Footer />
-      {isOpen && (
-        <ModalCongresista
-          currentCongresista={currentCongresista}
-          setIsOpen={setIsOpen}
-        />
-      )}
+      <ModalCongresista
+        currentCongresista={currentCongresista}
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+      />
       <HomeModal />
     </div>
   );

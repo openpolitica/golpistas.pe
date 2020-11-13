@@ -2,15 +2,28 @@ import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 import XIcon from "../icons/XIcon";
-import { makeSlug, pluralize } from '../utils/functions'
+import { makeSlug, pluralize } from "../utils/functions";
+import Modal from "./Modal";
 
-export default function ModalCongresista({ currentCongresista, setIsOpen }) {
+export default function ModalCongresista({
+  currentCongresista,
+  setIsOpen,
+  isOpen,
+}) {
   const handleClose = () => {
     setIsOpen(false);
   };
 
+  if (!currentCongresista) return null;
+
   return (
-    <div className={styles.modalWindow}>
+    <Modal
+      onRequestClose={handleClose}
+      isOpen={isOpen}
+      className={styles.modalWindow}
+      overlayClassName="white"
+      color="#737b7d"
+    >
       <div className={styles.modal}>
         <div className={styles.imageContainer}>
           <Image
@@ -27,7 +40,9 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
           </p>
           <p className={styles.partido}>
             <img
-              src={`/partidos/${makeSlug(currentCongresista.partidoPolitico.nombre)}.png`}
+              src={`/partidos/${makeSlug(
+                currentCongresista.partidoPolitico.nombre
+              )}.png`}
               className={styles.partidoLogo}
             />
             {currentCongresista.partidoPolitico.nombre.toLowerCase()}
@@ -56,6 +71,6 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
           <XIcon />
         </div>
       </div>
-    </div>
+    </Modal>
   );
 }

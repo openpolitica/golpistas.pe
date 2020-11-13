@@ -32,17 +32,17 @@
   background-color: #000;
   color: #fff;
   letter-spacing: 0.1px;
-  background-image: url(/educacion-chicha.jpg), linear-gradient(0deg, rgba(31, 31, 31, 0.81), rgba(31, 31, 31, 0.81));
+  background-image: url(/educacion-chicha.jpg),
+    linear-gradient(0deg, rgba(31, 31, 31, 0.81), rgba(31, 31, 31, 0.81));
   background-blend-mode: multiply, color;
   background-size: cover;
   background-color: #ffffff00;
 }
 
 .modal .modal-close {
-  background-image: url(/assets/close.svg);
-  background-repeat: no-repeat;
-  content: "";
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   font-size: 24px;
   height: 24px;

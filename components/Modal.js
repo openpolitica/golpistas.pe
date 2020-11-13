@@ -1,5 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
+import XIcon from "../icons/XIcon";
 
 const Modal = ({
   onRequestClose,
@@ -8,6 +9,7 @@ const Modal = ({
   className = "",
   children,
   overlayClassName,
+  color = "#fff",
   ...restProps
 }) => (
   <ReactModal
@@ -23,11 +25,9 @@ const Modal = ({
       ) : (
         title
       )}
-      <span
-        className="modal-close"
-        onClick={onRequestClose}
-        data-testid="modal-close-button"
-      />
+      <span className="modal-close" onClick={onRequestClose}>
+        <XIcon color={color} />
+      </span>
     </div>
     <div className="modal-content">{children}</div>
   </ReactModal>
