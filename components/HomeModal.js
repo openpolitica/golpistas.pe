@@ -24,7 +24,7 @@ function FieldCongress({ name, region, denuncia }) {
 }
 
 function HomeModal() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
 
   return (
     <Modal
