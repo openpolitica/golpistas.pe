@@ -1,7 +1,7 @@
 .votes {
   padding: 3rem 6rem;
   width: 100%;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
 }
 
 .title {
@@ -9,6 +9,12 @@
   color: #373f41;
   font-size: 48px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.cta {
+  font-size: 22px;
+  margin: 0;
   text-align: center;
 }
 
