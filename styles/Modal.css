@@ -1,0 +1,70 @@
+.react-modal-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  padding: 0 15px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 20;
+}
+
+.react-modal-overlay.white {
+  background-color: rgb(255 255 255 / 85%);
+}
+
+.modal {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin: auto;
+  padding: 36px 30px;
+  position: relative;
+  width: 100%;
+  outline: none;
+}
+
+.modal.main-modal {
+  max-width: 700px;
+  padding: 23px 36px 35px;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 0.1px;
+  background-image: url(/educacion-chicha.jpg), linear-gradient(0deg, rgba(31, 31, 31, 0.81), rgba(31, 31, 31, 0.81));
+  background-blend-mode: multiply, color;
+  background-size: cover;
+  background-color: #ffffff00;
+}
+
+.modal .modal-close {
+  background-image: url(/assets/close.svg);
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  cursor: pointer;
+  font-size: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 24px;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  margin-right: -24px;
+  padding-right: 24px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  background-color: transparent;
+  height: 8px;
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #d6dde6;
+  border-radius: 6px;
+}
