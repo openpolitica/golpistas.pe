@@ -7,6 +7,8 @@ export default function Votes() {
       <p className={styles.subtitle}>
         Denuncias sobre corrupción, lavado de activos e incluso homicidio.
       </p>
+      <div><a target="_blank" href="https://elfoco.pe/informes/todos-los-congresistas-con-expedientes-en-el-ministerio-publico">*Fuente: La lista completa de los congresistas con Expedientes en el Ministerio Público</a></div>
+      
       <div className={styles.line}>
         <div className={styles.red}>
           <div className={styles.number}>

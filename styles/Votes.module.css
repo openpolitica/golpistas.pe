@@ -4,6 +4,16 @@
   background-color: #f8f8f8;
 }
 
+.votes > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.votes > div > a {
+  text-decoration: underline;
+}
+
 .title {
   font-family: TiemposHeadline;
   color: #373f41;
@@ -21,7 +31,7 @@
 .subtitle {
   font-size: 25px;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   text-align: center;
 }
 

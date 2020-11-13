@@ -20,7 +20,7 @@ export default function Congresistas({ openModal }) {
     <>
       <div className={styles.container}>
         {congresistas
-          .filter((congresista) => congresista.votos.votoVacancia >= 1)
+          .filter((congresista) => congresista.votos.votoVacancia == 1)
           .map((congresista) => (
             <Image
               key={congresista.nombres + congresista.apellidos}
