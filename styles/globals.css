@@ -37,7 +37,7 @@ a {
 
 @font-face {
   font-family: "TiemposHeadline";
-  src: url("/fonts/TiemposHeadline/TiemposHeadline-Regular.ttf");
+  src: url("/fonts/TiemposHeadline/TiemposHeadline-Regular.otf");
   font-style: medium;
   font-weight: 700;
   font-display: swap;
