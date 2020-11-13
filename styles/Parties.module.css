@@ -1,0 +1,43 @@
+.header {
+   margin-top: 3rem;
+}
+.container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin: 1rem auto 3rem;
+}
+
+.partiesContainer {
+    text-align: center;
+}
+
+.partyImageContainer{
+    min-height: 80px;
+}
+.parties {
+    vertical-align: middle;
+    filter: grayscale(100%);
+    max-width: 60px;
+    cursor: pointer;
+    margin: auto 20px;
+}
+
+.partiesActive{
+    vertical-align: middle;
+    max-width: 60px;
+    cursor: pointer;
+    margin: auto 20px;
+}
+
+.partyName{
+    max-width: 100px;
+    font-size: 10px;
+}
+
+
+.cta {
+    font-size: 22px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
