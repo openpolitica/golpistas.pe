@@ -26,7 +26,6 @@ export default function Votes() {
           <div className={styles.yellowBlock} />
         </div>
       </div>
-      <p className={styles.cta}>Haz click para ver la cantidad de denuncias</p>
     </div>
   );
 }

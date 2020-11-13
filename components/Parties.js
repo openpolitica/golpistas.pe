@@ -19,6 +19,7 @@ export default function Parties ({ parties, filterParty }) {
             )
           })}
       </div>
+      <p className={styles.cta}>Haz click para ver la cantidad de denuncias</p>
     </>
   )
 }
