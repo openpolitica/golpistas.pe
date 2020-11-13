@@ -19,16 +19,18 @@ export default function Congresistas({ openModal }) {
   return (
     <>
       <div className={styles.container}>
-        {congresistas.map((congresista) => (
-          <Image
-            key={congresista.nombres + congresista.apellidos}
-            src={congresista.imageUrl}
-            width={200}
-            height={270}
-            className={styles.image}
-            onClick={() => openModal(congresista)}
-          />
-        ))}
+        {congresistas
+          .filter((congresista) => congresista.votos.votoVacancia >= 1)
+          .map((congresista) => (
+            <Image
+              key={congresista.nombres + congresista.apellidos}
+              src={congresista.imageUrl}
+              width={200}
+              height={270}
+              className={styles.image}
+              onClick={() => openModal(congresista)}
+            />
+          ))}
       </div>
     </>
   );
