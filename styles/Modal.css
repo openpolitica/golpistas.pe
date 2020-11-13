@@ -44,10 +44,27 @@
   content: "";
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;
-  height: 18px;
+  font-size: 24px;
+  height: 24px;
   position: absolute;
   right: 10px;
   top: 14px;
-  width: 18px;
+  width: 24px;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  margin-right: -24px;
+  padding-right: 24px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  background-color: transparent;
+  height: 8px;
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #d6dde6;
+  border-radius: 6px;
 }
