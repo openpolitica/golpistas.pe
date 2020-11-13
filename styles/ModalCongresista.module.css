@@ -46,6 +46,13 @@
   font-size: 24px;
   color: #989898;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.partidoLogo {
+  width: 24px;
+  margin-right: 10px;
 }
 
 .line {

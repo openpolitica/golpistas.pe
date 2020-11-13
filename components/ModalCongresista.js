@@ -3,6 +3,17 @@ import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 import XIcon from "../icons/XIcon";
 
+const partidos = {
+  "FUERZA POPULAR": "FP",
+  "FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP": "FREPAP",
+  "ACCION POPULAR": "AP",
+  "PARTIDO DEMOCRATICO SOMOS PERU": "SP",
+  "ALIANZA PARA EL PROGRESO": "APEP",
+  "EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD": "FA",
+  "UNION POR EL PERU": "UPEP",
+  "PODEMOS PERU": "PP",
+};
+
 export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   const handleClose = () => {
     setIsOpen(false);
@@ -12,7 +23,12 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
     <div className={styles.modalWindow}>
       <div className={styles.modal}>
         <div className={styles.imageContainer}>
-          <Image src={currentCongresista.imageUrl} width={480} height={650} className={styles.image}/>
+          <Image
+            src={currentCongresista.imageUrl}
+            width={480}
+            height={650}
+            className={styles.image}
+          />
         </div>
         <div className={styles.info}>
           <p className={styles.name}>
@@ -20,6 +36,16 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
             {currentCongresista.apellidos.toLowerCase()}
           </p>
           <p className={styles.partido}>
+            <img
+              src={`/partidos/${
+                partidos[
+                  currentCongresista.partidoPolitico.nombre
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                ]
+              }.png`}
+              className={styles.partidoLogo}
+            />
             {currentCongresista.partidoPolitico.nombre.toLowerCase()}
           </p>
           <hr className={styles.line} />
