@@ -24,6 +24,34 @@ export default function Home() {
       <Head>
         <title>golpistas.pe</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="title" content="Golpistas" />
+        <meta
+          name="description"
+          content="Una web con información acerca de las denuncias de los congresistas que no debemos olvidar."
+        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://golpistas.pe/" />
+        <meta property="og:title" content="Golpistas" />
+        <meta
+          property="og:description"
+          content="Una web con información acerca de las denuncias de los congresistas que no debemos olvidar."
+        />
+        <meta
+          property="og:image"
+          content="https://golpistas.pe/open-graph-logo.png"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://golpistas.pe/" />
+        <meta property="twitter:title" content="Golpistas" />
+        <meta
+          property="twitter:description"
+          content="Una web con información acerca de las denuncias de los congresistas que no debemos olvidar."
+        />
+        <meta
+          property="twitter:image"
+          content="https://kampu.app/open-graph-logo.png"
+        />
       </Head>
 
       <Header />
