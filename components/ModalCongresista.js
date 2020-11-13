@@ -2,17 +2,7 @@ import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 import XIcon from "../icons/XIcon";
-
-const partidos = {
-  "FUERZA POPULAR": "FP",
-  "FRENTE POPULAR AGRICOLA FIA DEL PERU - FREPAP": "FREPAP",
-  "ACCION POPULAR": "AP",
-  "PARTIDO DEMOCRATICO SOMOS PERU": "SP",
-  "ALIANZA PARA EL PROGRESO": "APEP",
-  "EL FRENTE AMPLIO POR JUSTICIA, VIDA Y LIBERTAD": "FA",
-  "UNION POR EL PERU": "UPEP",
-  "PODEMOS PERU": "PP",
-};
+import { makeSlug } from '../utils/functions'
 
 export default function ModalCongresista({ currentCongresista, setIsOpen }) {
   const handleClose = () => {
@@ -37,13 +27,7 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
           </p>
           <p className={styles.partido}>
             <img
-              src={`/partidos/${
-                partidos[
-                  currentCongresista.partidoPolitico.nombre
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "")
-                ]
-              }.png`}
+              src={`/partidos/${makeSlug(currentCongresista.partidoPolitico.nombre)}.png`}
               className={styles.partidoLogo}
             />
             {currentCongresista.partidoPolitico.nombre.toLowerCase()}

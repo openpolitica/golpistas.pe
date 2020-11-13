@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 230px);
   gap: 0px;
+  text-align: center;
 }
 
 .imageContainer {
@@ -16,4 +17,10 @@
   filter: grayscale(100%);
   width: 100%;
   cursor: pointer;
+}
+
+.names{
+  font-size: 12px;
+  margin-block-start: 0.5rem;
+  margin-block-end: 2rem;
 }
