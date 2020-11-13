@@ -7,7 +7,6 @@ export default function Congresistas ({ congresistas, openModal }) {
       <div className={styles.container}>
         {congresistas
           .map((congresista) => (
-            <div>
               <Image
                 key={congresista.nombres + congresista.apellidos}
                 src={congresista.imageUrl}
@@ -16,8 +15,6 @@ export default function Congresistas ({ congresistas, openModal }) {
                 className={styles.image}
                 onClick={() => openModal(congresista)}
               />
-              <p className={styles.names}>{congresista.nombres + ' ' + congresista.apellidos}</p>
-            </div>
           ))}
       </div>
     </>
