@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../styles/ModalCongresista.module.css";
 import JudgeIcon from "../icons/JudgeIcon";
 import XIcon from "../icons/XIcon";
+import { pluralize } from "../utils";
 
 const partidos = {
   "FUERZA POPULAR": "FP",
@@ -60,7 +61,12 @@ export default function ModalCongresista({ currentCongresista, setIsOpen }) {
             <div className={styles.iconContainer}>
               <JudgeIcon />
             </div>
-            {currentCongresista.investigaciones} denuncias
+            {currentCongresista.investigaciones}{" "}
+            {pluralize(
+              currentCongresista.investigaciones,
+              "denuncias",
+              "denuncia"
+            )}
           </p>
         </div>
         <div onClick={handleClose} className={styles.x}>
