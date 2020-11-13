@@ -11,6 +11,10 @@
   z-index: 20;
 }
 
+.react-modal-overlay.white {
+  background-color: rgb(255 255 255 / 85%);
+}
+
 .modal {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
@@ -25,6 +29,9 @@
   max-width: 700px;
   padding: 23px 36px 35px;
   border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 0.1px
 }
 
 .modal .modal-close {

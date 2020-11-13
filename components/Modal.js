@@ -7,6 +7,7 @@ const Modal = ({
   body,
   className = "",
   children,
+  overlayClassName,
   ...restProps
 }) => (
   <ReactModal
@@ -14,19 +15,21 @@ const Modal = ({
     onRequestClose={onRequestClose}
     className={`modal ${className}`}
     ariaHideApp={false}
-    overlayClassName="react-modal-overlay"
+    overlayClassName={`react-modal-overlay ${overlayClassName}`}
   >
     <div className="modal-top-section">
-      {title && <h2 className="modal__title">{title}</h2>}
+      {typeof title === "string" ? (
+        <h2 className="modal__title">{title}</h2>
+      ) : (
+        title
+      )}
       <span
         className="modal-close"
         onClick={onRequestClose}
         data-testid="modal-close-button"
       />
     </div>
-    <div className="modal-content">
-      {children}
-    </div>
+    <div className="modal-content">{children}</div>
   </ReactModal>
 );
 
