@@ -18,6 +18,12 @@ const Modal = ({
     className={`modal ${className}`}
     ariaHideApp={false}
     overlayClassName={`react-modal-overlay ${overlayClassName}`}
+    onAfterOpen={() => {
+      document.body.style.overflow = "hidden";
+    }}
+    onAfterClose={() => {
+      document.body.style.overflow = "auto";
+    }}
   >
     <div className="modal-top-section">
       {typeof title === "string" ? (
