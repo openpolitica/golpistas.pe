@@ -9,8 +9,9 @@ import Header from "../components/Header";
 import Congresistas from "../components/Congresistas";
 import ModalCongresista from "../components/ModalCongresista";
 import HomeModal from "../components/HomeModal";
+import MarchasModal from "../components/MarchasModal";
 import Footer from "../components/Footer";
-import { makeSlug, onlyUnique } from "../utils/functions";
+import { makeSlug } from "../utils/functions";
 import Parties from "../components/Parties";
 
 export default function Home() {
@@ -125,7 +126,9 @@ export default function Home() {
         setIsOpen={setIsOpen}
         isOpen={isOpen}
       />
+      {/* Modals */}
       <HomeModal />
+      <MarchasModal />
     </div>
   );
 }
