@@ -55,7 +55,11 @@ function Block({ place, marchas }) {
     <div className={styles.block}>
       <h4 className={styles.place}>{place}</h4>
       <div className={styles.blockContent}>
-        <div className={styles.line} />
+        <div className={styles.lineContainer}>
+          <div className={styles.circle} />
+          <div className={styles.line} />
+          <div className={styles.circle} />
+        </div>
         <div className={styles.marchas}>
           {marchas.map((marcha) => (
             <p key={marcha}>{marcha}</p>

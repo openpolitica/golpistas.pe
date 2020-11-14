@@ -40,14 +40,30 @@
 
 .block p {
   margin: 0;
-  margin-bottom: 2px;
+  margin-bottom: 12px;
 }
 
-.block .line {
+.block .lineContainer {
+  width: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  background: #d10000;
+  border-radius: 50%;
+}
+
+.line {
   width: 1px;
-  border-left: 1px solid #d10000;
-  margin-right: 13px;
-  margin-left: 5px;
+  height: 100%;
+  background-color: #d10000;
 }
 
 .blockContent {
