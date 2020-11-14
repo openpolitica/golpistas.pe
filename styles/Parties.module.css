@@ -5,13 +5,14 @@
 .container {
   justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: 1rem auto 3rem;
-  overflow-x: auto;
 }
 
 .partiesContainer {
   text-align: center;
+  margin-bottom: 12px;
 }
 
 .partyImageContainer {
