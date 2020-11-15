@@ -107,7 +107,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://kampu.app/open-graph-logo.png"
+          content="https://golpistas.pe/open-graph-logo.png"
         />
       </Head>
 
