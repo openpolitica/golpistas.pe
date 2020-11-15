@@ -71,7 +71,7 @@ function Block({ place, marchas }) {
 }
 
 export default function MarchasModal() {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <Modal
