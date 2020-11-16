@@ -1,7 +1,8 @@
 import styles from '../styles/Parties.module.css'
+import departamentos from '../public/departamentos.json'
 import Select from 'react-select'
 
-export default function Parties ({ parties, selectedParty, setSelectedParty }) {
+export default function Parties ({ parties, selectedParty, setSelectedParty, selectedRegion, setSelectedRegion }) {
   const partiesOptions = parties.map(party => {
     return {
       value: party.slug,
@@ -37,7 +38,11 @@ export default function Parties ({ parties, selectedParty, setSelectedParty }) {
         </div>
         <div className="styles.filter">
           <label>Buscar por departamento:</label>
-          {/* <Select options={partiesOptions} onChange={handleChange}/> */}
+          <Select
+            options={departamentos}
+            onChange={option => setSelectedRegion(option)}
+            value={selectedRegion}
+          />
         </div>
       </div>
       <p className={styles.cta}>Haz click para ver la cantidad de denuncias</p>
