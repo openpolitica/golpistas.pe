@@ -20,6 +20,8 @@ export default function Home() {
   const [congresistas, setCongresistas] = useState([]);
   const [filteredCongresistas, setFilteredCongresistas] = useState([]);
   const [parties, setParties] = useState([]);
+  const [selectedParty, setSelectedParty] = useState(null)
+  const [selectedRegion, setSelectedRegion] = useState(null)
 
   useEffect(() => {
     async function getCongresistas() {
@@ -57,24 +59,23 @@ export default function Home() {
     setCurrentCongresista(congresista);
   };
 
-  const filterParty = (party) => {
-    if (
-      parties.some((partyEl) => {
-        return partyEl.slug === party.slug && party.isActive;
-      })
-    ) {
-      party.isActive = false;
-      setFilteredCongresistas(congresistas);
-      return;
+  useEffect(() => {
+    let filtered = congresistas
+    if (selectedParty && selectedParty.value !== 'Todos') {
+      filtered = congresistas.filter((congresista) => {
+        return makeSlug(congresista.partidoPolitico.nombre) === selectedParty.value;
+      });
     }
-    parties.forEach((party) => (party.isActive = false));
-    party.isActive = true;
-    let filtered = congresistas.filter((congresista) => {
-      return makeSlug(congresista.partidoPolitico.nombre) === party.slug;
-    });
+
+    if (selectedRegion && selectedRegion.value !== 'Todos') {
+      filtered = filtered.filter((congresista) => {
+        const region = congresista.partidoPolitico.departamento.toLowerCase()
+        return region === selectedRegion.value.toLowerCase()
+      })
+    }
 
     setFilteredCongresistas(filtered);
-  };
+  }, [selectedParty, selectedRegion])
 
   return (
     <div className={styles.container}>
@@ -118,7 +119,13 @@ export default function Home() {
       </div>
       <Banner />
       <Votes />
-      <Parties parties={parties} filterParty={filterParty} />
+      <Parties
+        parties={parties}
+        selectedParty={selectedParty}
+        setSelectedParty={setSelectedParty}
+        selectedRegion={selectedRegion}
+        setSelectedRegion={setSelectedRegion}
+      />
       <Congresistas congresistas={filteredCongresistas} openModal={openModal} />
       <Footer />
       <ModalCongresista
