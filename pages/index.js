@@ -61,13 +61,13 @@ export default function Home() {
 
   useEffect(() => {
     let filtered = congresistas
-    if (selectedParty) {
+    if (selectedParty && selectedParty.value !== 'Todos') {
       filtered = congresistas.filter((congresista) => {
         return makeSlug(congresista.partidoPolitico.nombre) === selectedParty.value;
       });
     }
 
-    if (selectedRegion) {
+    if (selectedRegion && selectedRegion.value !== 'Todos') {
       filtered = filtered.filter((congresista) => {
         const region = congresista.partidoPolitico.departamento.toLowerCase()
         return region === selectedRegion.value.toLowerCase()
