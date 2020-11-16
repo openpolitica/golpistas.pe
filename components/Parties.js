@@ -38,8 +38,8 @@ export default function Parties ({ parties, selectedParty, setSelectedParty, sel
             )
           })}
       </div>
-      <div>
-        <div className="styles.filter">
+      <div className={styles.filters}>
+        <div className={styles.filter}>
           <label>Buscar por partido:</label>
           <Select
             options={[{ value: 'Todos', label: 'Todos'}, ...partiesOptions]}
@@ -48,7 +48,7 @@ export default function Parties ({ parties, selectedParty, setSelectedParty, sel
             placeholder="Todos"
           />
         </div>
-        <div className="styles.filter">
+        <div className={styles.filter}>
           <label>Buscar por departamento:</label>
           <Select
             options={[{ value: 'Todos', label: 'Todos'}, ...departamentos]}

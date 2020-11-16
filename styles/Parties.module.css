@@ -43,3 +43,22 @@
   margin: 0 auto 1rem;
   text-align: center;
 }
+
+.filters {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.filter {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter + .filter {
+  margin-left: 32px;
+}
+
+.filter label {
+  margin-bottom: 8px
+}
