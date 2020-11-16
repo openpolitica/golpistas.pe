@@ -37,7 +37,12 @@
     padding: 1rem 2rem;
     padding-bottom: 4rem;
   }
+
   .title {
     font-size: 30px;
+  }
+
+  .hashtag {
+    font-size: 17px;
   }
 }
