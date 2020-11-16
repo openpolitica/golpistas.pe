@@ -62,3 +62,14 @@
 .filter label {
   margin-bottom: 8px
 }
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter + .filter {
+    margin-left: 0;
+    margin-top: 32px;
+  }
+}
