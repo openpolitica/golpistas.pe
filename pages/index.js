@@ -20,6 +20,7 @@ export default function Home() {
   const [congresistas, setCongresistas] = useState([]);
   const [filteredCongresistas, setFilteredCongresistas] = useState([]);
   const [parties, setParties] = useState([]);
+  const [selectedParty, setSelectedParty] = useState(null)
 
   useEffect(() => {
     async function getCongresistas() {
@@ -76,6 +77,17 @@ export default function Home() {
     setFilteredCongresistas(filtered);
   };
 
+  useEffect(() => {
+    let filtered = congresistas
+    if (selectedParty) {
+      filtered = congresistas.filter((congresista) => {
+        return makeSlug(congresista.partidoPolitico.nombre) === selectedParty.value;
+      });
+    }
+
+    setFilteredCongresistas(filtered);
+  }, [selectedParty])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -118,7 +130,7 @@ export default function Home() {
       </div>
       <Banner />
       <Votes />
-      <Parties parties={parties} filterParty={filterParty} />
+      <Parties parties={parties} selectedParty={selectedParty} setSelectedParty={setSelectedParty} />
       <Congresistas congresistas={filteredCongresistas} openModal={openModal} />
       <Footer />
       <ModalCongresista
